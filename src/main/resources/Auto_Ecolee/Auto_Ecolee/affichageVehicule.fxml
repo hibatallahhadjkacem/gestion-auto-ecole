@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="508.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.affichageVehiculeControleur">
+   <left>
+      <Pane prefHeight="508.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="66.0" layoutY="32.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/19.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d9e4f9" layoutX="59.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#d9e4f9" layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School" />
+            <Button fx:id="home" layoutX="-36.0" layoutY="106.0" mnemonicParsing="false" onAction="#home" onMouseEntered="#color" onMouseExited="#color2" prefHeight="33.0" prefWidth="210.0" style="-fx-background-color: #5673a9;" text="Home" textAlignment="RIGHT" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" onMouseEntered="#color" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-16.0" layoutY="155.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #5673a9;" text="Condidate" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="189.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="Instructor" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/conduit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/code.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-31.0" layoutY="320.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: #5673a9;" text="Exam" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/exam.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-19.0" layoutY="361.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #5673a9;" text="Payment" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/paiement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="398.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="dashboard" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/dshbord.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Driving school " textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/auto-ecole.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+      <center>
+      <Pane prefHeight="508.0" prefWidth="494.0" BorderPane.alignment="CENTER">
+         <children>
+                     <Button layoutX="345.0" layoutY="468.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="Back" textFill="#f2f2f2">
+         </Button>
+            <Text fill="#5673a9" layoutX="25.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle" wrappingWidth="81.33673095703125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tablePapier" layoutX="14.0" layoutY="261.0" prefHeight="200.0" prefWidth="213.0" style="-fx-background-color: #d9e4f9;">
+              <columns>
+                <TableColumn fx:id="colType" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Type" />
+                <TableColumn fx:id="colDatePap" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Date" />
+                  <TableColumn fx:id="colDateProch" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Next Date" />
+                  <TableColumn fx:id="colCoutP" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Cost" />
+              </columns>
+            </TableView>
+            <Text fill="#5673a9" layoutX="25.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle paperwork" wrappingWidth="117.33673858642578">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#5673a9" layoutX="271.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scheduling" wrappingWidth="81.33673095703125">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableReparation" layoutX="253.0" layoutY="261.0" prefHeight="200.0" prefWidth="213.0" style="-fx-background-color: #d9e4f9;">
+               <columns>
+                  <TableColumn fx:id="colDate" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Date" />
+                  <TableColumn fx:id="colCout" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Cost" />
+                  <TableColumn fx:id="colDescription" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Description" />
+                  <TableColumn fx:id="colPreuve" prefWidth="75.0" style="-fx-background-color: #d9e4f9;" text="Proof" />
+               </columns>
+            </TableView>
+            <HBox layoutX="10.0" layoutY="163.0" prefHeight="33.0" prefWidth="474.0" style="-fx-background-color: #5673a9;">
+               <children>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" wrappingWidth="29.33673095703125">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Mileage" wrappingWidth="117.33673858642578">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Remaining Km to Service" wrappingWidth="142.93671417236328">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="200.0" prefHeight="37.0" prefWidth="474.0" style="-fx-background-color: #d9e4f9;">
+               <children>
+                  <Text fx:id="age" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="29.33673095703125">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="kmt" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.33673858642578">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="90.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="kmp" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="142.93671417236328">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Text fill="#5673a9" layoutX="91.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Number" wrappingWidth="122.93677520751953">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <HBox layoutX="11.0" layoutY="81.0" prefHeight="34.0" prefWidth="474.0" style="-fx-background-color: #5673a9;">
+               <children>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Model" wrappingWidth="40.53668212890625">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Category" wrappingWidth="117.33673858642578">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fill="#d9e4f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Service" wrappingWidth="142.93671417236328">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="120.0" prefHeight="38.0" prefWidth="473.0" style="-fx-background-color: #d9e4f9;">
+               <children>
+                  <Text fx:id="model" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="50.13677930831909">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="categ" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.33673858642578">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="dates" fill="#5673a9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="110.13666534423828">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <TextField fx:id="immat" layoutX="230.0" layoutY="43.0" promptText="Please enter" style="-fx-border-color: #d9e4f9;" />
+            <Button layoutX="388.0" layoutY="43.0" mnemonicParsing="false" onAction="#get" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #5673a9;" text="get" textFill="#f2f2f2" />
+            
+            </children>
+            </Pane>
+            </center>
+   
+</BorderPane>

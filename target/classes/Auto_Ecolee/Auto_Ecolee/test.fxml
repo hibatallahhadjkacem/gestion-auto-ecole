@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="508.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.ChoixControleur">
+   <left>
+      <Pane prefHeight="508.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="66.0" layoutY="32.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/19.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d9e4f9" layoutX="59.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#d9e4f9" layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School" />
+            <Button fx:id="home" layoutX="-36.0" layoutY="106.0" mnemonicParsing="false" onAction="#home" onMouseEntered="#color" onMouseExited="#color2" prefHeight="33.0" prefWidth="210.0" style="-fx-background-color: #5673a9;" text="Home" textAlignment="RIGHT" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" onMouseEntered="#color" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-16.0" layoutY="155.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #5673a9;" text="Condidate" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="189.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="Instructor" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/conduit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/code.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-31.0" layoutY="320.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: #5673a9;" text="Exam" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/exam.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-19.0" layoutY="361.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #5673a9;" text="Payment" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/paiement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="398.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="dashboard" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/dshbord.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Driving school " textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/auto-ecole.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="508.0" prefWidth="494.0" BorderPane.alignment="CENTER">
+         <children>
+         <Button alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="66.0" layoutY="107.0" mnemonicParsing="false" onAction="#add" prefHeight="130.0" prefWidth="147.0" style="-fx-background-color: #d9e4f9;" text="Add" textFill="#5673a9">
+               <graphic>
+                  <ImageView fitHeight="86.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="261.0" layoutY="107.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="147.0" style="-fx-background-color: #d9e4f9;" text="Delete" textFill="#5673a9">
+               <graphic>
+                  <ImageView fitHeight="89.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="66.0" layoutY="293.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="147.0" style="-fx-background-color: #d9e4f9;" text="Update" textFill="#5673a9">
+               <graphic>
+                  <ImageView fitHeight="86.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="261.0" layoutY="293.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="147.0" style="-fx-background-color: #d9e4f9;" text="Get" textFill="#5673a9">
+               <graphic>
+                  <ImageView fitHeight="86.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/affich.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                        <Text fill="#5673a9" layoutX="35.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle" wrappingWidth="81.33673095703125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="102.0" layoutY="433.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #d9e4f9;" textFill="#5673a9">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fx:id="test" layoutX="213.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="110.13671875" />     </children> </Pane>
+   </center>
+</BorderPane>
