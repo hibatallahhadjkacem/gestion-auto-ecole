@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.weeklyPlannerController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="539.0" prefWidth="580.0" style="-fx-background-color: #B7B8BC;">
+         <children>
+            <TableView fx:id="table_dispo" layoutX="19.0" layoutY="243.0" prefHeight="210.0" prefWidth="630.0">
+              <columns>
+                <TableColumn fx:id="col_date" prefWidth="96.79998588562012"  text="Date" />
+                <TableColumn fx:id="col_startTime" prefWidth="102.40001678466797"  text="Start Time" />
+                  <TableColumn fx:id="col_endTime" minWidth="4.79998779296875" prefWidth="112.80000305175781"  text="End Time" />
+                  <TableColumn fx:id="availabilityColumn" minWidth="0.0" prefWidth="113.60003662109375"  text="availability" />
+                  <TableColumn fx:id="col_select" prefWidth="65.60003662109375" text="to delete" />
+                  <TableColumn fx:id="col_changeAvailability" minWidth="0.0" prefWidth="140.00003051757812"  text="change availibility" />                                                    
+              </columns>
+            </TableView>
+            
+            
+            <TableView fx:id="table_dispo_jour" layoutX="57.0" layoutY="50.0" prefHeight="146.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="col_todaySessionDate" prefWidth="82.4000244140625"  text="Date" />
+                <TableColumn fx:id="col_todayStartTime" prefWidth="104.79998779296875" text="Start Time" />
+                  <TableColumn fx:id="col_todayEndTime" minWidth="4.79998779296875" prefWidth="98.39996337890625"  text="End Time" />
+                  <TableColumn fx:id="col_todayDisponibilite" minWidth="0.0" prefWidth="80.800048828125"  text="availability" />
+                  <TableColumn fx:id="col_todaySelect" prefWidth="54.4000244140625"  text="to delete" />
+                  <TableColumn fx:id="col_todayChangeAvailability" prefWidth="135.19998779296873"  text="change availibility" />                                                    
+              </columns>
+            </TableView>
+            
+            
+          
+           
+            
+            
+            <Button layoutX="111.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #5673a9;"  textFill="#d9e4f9" text="add "/>
+            <Button layoutX="287.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #d9e4f9;"  textFill="#5673a9" text="delete"/>
+            <Label layoutX="225.0" layoutY="180.0" prefHeight="74.0" prefWidth="217.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill:#082866" text="WEEKLY PLANNER " textAlignment="CENTER" />
+            <Label layoutX="225.0" layoutY="-8.0" prefHeight="74.0" prefWidth="217.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill:#082866" text="DAILY PLANNER" textAlignment="CENTER" />
+            <Button id="m" fx:id="more_button" layoutX="467.0" layoutY="465.0" mnemonicParsing="false" onAction="#switchToDisponibilites" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: #5673a9;" text="More" textFill="#d9e4f9" />
+            <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="183.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:\Users\ktiti\eclipse-workspace\proj_serious_version\src\main\resources\icons\4.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="183.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:\Users\ktiti\eclipse-workspace\proj_serious_version\src\main\resources\icons\4.jpg" />
+               </image>
+            </ImageView>
+            
+                
+         </children></AnchorPane>
+  </items>
+</SplitPane>

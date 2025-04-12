@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="669.0" style="-fx-background-color: #ffffff" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.DashboardController">
+   <children>
+     
+      <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="508.0" prefWidth="175.0" style="-fx-background-color: #5673a9;">
+               <children>
+               
+                  <ImageView fitHeight="65.0" fitWidth="66.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485084555_1202563364771212_4950567910734387143_n.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="59.0" fitWidth="63.0" layoutX="64.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                  
+                   <Text fill="#d9e4f9" layoutX="59.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+                  <font>
+                  <Font name="Corbel Bold" size="22.0" />
+                  </font>
+                   </Text>
+            
+              <Text fill="#d9e4f9" layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School" />
+            <Button fx:id="home" layoutX="-36.0" layoutY="106.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="33.0" prefWidth="210.0" style="-fx-background-color: #5673a9;" text="Home" textAlignment="RIGHT" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" onMouseEntered="#color" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\477798212_1333161571232158_154466163284516549_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-16.0" layoutY="155.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #5673a9;" text="Condidate" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485008096_9468846086527275_4125771150502199773_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+           
+          <Button layoutX="-18.0" layoutY="189.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="Instructor" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485071911_624833157116100_1837120441914441016_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485711972_1588085738568585_7016212433575146370_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485084120_1633949624152883_6985241616844978119_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-31.0" layoutY="320.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: #5673a9;" text="Exam" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485084544_1591036508262445_5525717240646815033_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-19.0" layoutY="361.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #5673a9;" text="Payment" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485682253_1202354671481887_1855037794617941813_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="398.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="dashboard" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\Capture d’écran 2025-04-01 134917.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Driving school " textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:\Users\ktiti\OneDrive\Bureau\projet java\485088134_584878904573758_1603416942363609279_n.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+           
+          
+               </children>   
+        
+      </AnchorPane>
+      
+      
+      
+      
+      <AnchorPane layoutX="173.0" layoutY="-1.0" prefHeight="508.0" prefWidth="498.0">
+         <ImageView fitHeight="221.0" fitWidth="326.0" layoutX="64.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../../OneDrive/Bureau/projet%20java/Dash1.jpg" />
+            </image>
+         </ImageView>
+        
+        
+        
+        <HBox layoutX="14.0" layoutY="279.0" prefHeight="99.0" prefWidth="436.0">
+        <children>
+        
+        
+            <AnchorPane prefHeight="76.0" prefWidth="422.0" style="-fx-background-color: #ffffff">
+                  <children>
+                  
+                      <Pane layoutY="5.0" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color:#5673a9;              -fx-border-width: 2px 2px 2px 2px; -fx-border-radius: 20px;  -fx-background-radius: 20px;   -fx-border-style: solid; -fx-border-color: #ACB2DF;">
+                     <children>
+                        <Label layoutX="2.0" layoutY="14.0" prefHeight="28.0" prefWidth="96.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="    Instructors" textFill="WHITE" />
+                        <Label fx:id="lblTotalMoniteurs" layoutX="19.0" layoutY="42.0" prefHeight="28.0" prefWidth="63.0" />
+                     </children>
+                  </Pane>
+                 
+                         <Pane layoutX="111.0" layoutY="5.0" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color:#5673a9;              -fx-border-width: 2px 2px 2px 2px; -fx-border-radius: 20px;  -fx-background-radius: 20px;   -fx-border-style: solid; -fx-border-color: #ACB2DF;">
+                  <children>
+                     <Label layoutX="5.0" layoutY="14.0" prefHeight="34.0" prefWidth="115.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="    Condidate" textFill="#fffefe" />
+                        <Label fx:id="lblTotalCandidats" layoutX="19.0" layoutY="40.0" prefHeight="28.0" prefWidth="63.0" style="-fx-font-size: 12px; -fx-font-family: bold;" />
+                       
+                                          </children>
+                  </Pane>
+                  <Pane layoutX="220.0" layoutY="5.0" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color:#5673a9;              -fx-border-width: 2px 2px 2px 2px; -fx-border-radius: 20px;  -fx-background-radius: 20px;   -fx-border-style: solid; -fx-border-color: #ACB2DF;">
+                     <children>
+                        <Label layoutY="14.0" prefHeight="34.0" prefWidth="115.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="      Vehicule" textFill="#fffefe" />
+                        <Label fx:id="lblTotalVehicules" layoutX="19.0" layoutY="40.0" prefHeight="28.0" prefWidth="63.0" />
+                                            </children>
+                  </Pane>
+                  <Pane layoutX="332.0" layoutY="5.0" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color:#5673a9;              -fx-border-width: 2px 2px 2px 2px; -fx-border-radius: 20px;  -fx-background-radius: 20px;   -fx-border-style: solid; -fx-border-color: #ACB2DF;">
+                     <children>
+                        <Label layoutX="9.0" layoutY="14.0" prefHeight="34.0" prefWidth="115.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="      Paiment" textFill="#fffefe" />
+                        <Label fx:id="lblTotalPaiements" layoutX="19.0" layoutY="40.0" prefHeight="28.0" prefWidth="63.0" />
+                        
+                       </children>
+                  </Pane>
+               
+                  </children>
+            </AnchorPane>
+            
+         
+        </children>
+        </HBox> 
+          <VBox alignment="CENTER" layoutX="32.0" layoutY="390.0" prefHeight="93.0" prefWidth="398.0" spacing="10">
+            <Label prefHeight="44.0" prefWidth="139.0" style="-fx-font-family: bold; -fx-font-size: 12px;" text="  Paiement Progression" textFill="#1325ae" />
+            <ProgressBar fx:id="paiementProgressBar" prefWidth="300" />
+            <ProgressIndicator fx:id="paiementProgressIndicator" />
+        </VBox>
+    
+                                      <Label layoutX="94.0" layoutY="-46.0" prefHeight="194.0" prefWidth="336.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-background-color: transparant;" text="📊 Tableau de bord" textFill="#1c1d71">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+</AnchorPane>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   </children>
+</AnchorPane>

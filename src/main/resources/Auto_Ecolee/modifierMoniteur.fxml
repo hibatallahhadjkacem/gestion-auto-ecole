@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="555.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.ModifierMoniteurController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="694.0">
+         <children>
+          <Label layoutX="313.0" layoutY="62.0" text="First Name" />
+                  <Label layoutX="315.0" layoutY="106.0" prefHeight="18.0" prefWidth="82.0" text="Last Name" />
+                  <TextField fx:id="tf_nom" layoutX="462.0" layoutY="58.0" />
+                  <TextField fx:id="tf_prenom" layoutX="462.0" layoutY="103.0" />
+                  
+            
+            <Label fx:id="sexe" layoutX="317.0" layoutY="156.0" text="Sexe" />
+            <Label layoutX="317.0" layoutY="277.0" text="Phone number" />
+            <Label fx:id="lab_mail" layoutX="320.0" layoutY="210.0" prefHeight="18.0" prefWidth="58.0" text="Email" />
+            <Label layoutX="315.0" layoutY="340.0" text="Date of recruitment" />
+            <DatePicker fx:id="date" layoutX="470.0" layoutY="336.0" />
+            
+            <RadioButton fx:id="male" layoutX="462.0" layoutY="156.0" mnemonicParsing="false" text=" Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexeToggleGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="female" layoutX="593.0" layoutY="156.0" mnemonicParsing="false" text="Female " toggleGroup="$sexeToggleGroup" />
+           
+            <TextField fx:id="tf_email" layoutX="470.0" layoutY="207.0" />
+            <TextField fx:id="tf_phone" layoutX="476.0" layoutY="273.0" />
+            <Button fx:id="btn_save" layoutX="587.0" layoutY="437.0" mnemonicParsing="false" onAction="#Save" prefHeight="26.0" prefWidth="150.0" text="save"  style="-fx-background-color: #5673a9;"  textFill="#d9e4f9"/>
+               </children>
+            </AnchorPane>
+   
+  </items>
+</SplitPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.AfficherTranchesController" style="-fx-background-color: #B7B8BC;">
+         <children>
+
+<TableView fx:id="tableTranches" layoutX="30.0" layoutY="108.0" prefHeight="114.0" prefWidth="491.0">
+    <columns>
+        <TableColumn fx:id="colNumero" prefWidth="118.4000244140625" text="Installment number" />
+        <TableColumn fx:id="colDateEcheance" prefWidth="104.79998779296875" text="Deadline Date" />
+        <TableColumn fx:id="colMontant" prefWidth="71.20001220703125" text="Amount" />
+        <TableColumn fx:id="colStatut" prefWidth="78.39996337890625" text="Status" />
+        <TableColumn fx:id="colDatePaiement" prefWidth="114.39998779296877" text="Payment Date" />
+    </columns>
+</TableView>
+
+<Button fx:id="btnEditTranche" layoutX="160.0" layoutY="239.0" onAction="#handleEditTranche" prefHeight="26.0" prefWidth="232.0" style="-fx-background-color: #5673a9; -fx-text-fill: #d9e4f9;" text="Edit" />
+      <Label layoutX="179.0" layoutY="25.0" prefHeight="79.0" prefWidth="232.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill:#082866;" text="Installment Information" />
+
+
+
+ </children>   
+            </AnchorPane>
