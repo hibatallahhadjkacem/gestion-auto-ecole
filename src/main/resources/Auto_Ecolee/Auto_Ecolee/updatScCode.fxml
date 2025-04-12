@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="508.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.updatScCodeControleur">
+     <left>
+      <Pane prefHeight="508.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="66.0" layoutY="32.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/19.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d9e4f9" layoutX="59.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#d9e4f9" layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School" />
+            <Button fx:id="home" layoutX="-36.0" layoutY="106.0" mnemonicParsing="false" onAction="#home" onMouseEntered="#color" onMouseExited="#color2" prefHeight="33.0" prefWidth="210.0" style="-fx-background-color: #5673a9;" text="Home" textAlignment="RIGHT" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" onMouseEntered="#color" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-16.0" layoutY="155.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #5673a9;" text="Condidate" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="189.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="Instructor" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/condidat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-31.0" layoutY="233.0" mnemonicParsing="false" onAction="#vehicule" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="205.0" style="-fx-background-color: #5673a9;" text="Vehicle" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/vehicule.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onAction="#seanceCond" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/conduit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-31.0" layoutY="320.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: #5673a9;" text="Exam" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/exam.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-19.0" layoutY="361.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #5673a9;" text="Payment" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/paiement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="-18.0" layoutY="398.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #5673a9;" text="dashboard" textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/dshbord.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_CENTER" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Driving school " textFill="#d9e4f9">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/auto-ecole.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="508.0" prefWidth="494.0" BorderPane.alignment="CENTER">
+         <children>
+                     <Button layoutX="201.0" layoutY="399.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #d9e4f9;" text="Back" textFill="#5673a9">
+         </Button>
+            <Text fill="#5673a9" layoutX="19.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code session " wrappingWidth="136.53675079345703">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="338.0" layoutY="399.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="Update" textFill="#f2f2f2" />
+                        <DatePicker fx:id="date" layoutX="98.0" layoutY="167.0" prefHeight="27.0" prefWidth="130.0" promptText="Date" style="-fx-border-color: #d9e4f9;" />
+            <AnchorPane layoutX="440.0" layoutY="165.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: #DEDEDE; -fx-border-color: #d9e4f9;">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="2.0" layoutY="3.0">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/watch.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="time" layoutX="331.0" layoutY="165.0" prefHeight="28.0" prefWidth="109.0" promptText="hh : mm" style="-fx-border-color: #d9e4f9;" />
+             <Label layoutX="111.0" layoutY="89.0" text="Session number" textFill="#5673a9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="52.0" layoutY="183.0" />
+            <TextField fx:id="num" layoutX="226.0" layoutY="84.0" promptText="Please enter" style="-fx-border-color: #d9e4f9;" />
+            <TextField fx:id="monitId" layoutX="96.0" layoutY="288.0" prefHeight="27.0" prefWidth="134.0" promptText="Please enter" style="-fx-border-color: #d9e4f9;" />
+            <TextField fx:id="condidId" layoutX="336.0" layoutY="288.0" prefHeight="27.0" prefWidth="135.0" promptText="Please enter" style="-fx-border-color: #d9e4f9;" />
+            <Label layoutX="245.0" layoutY="172.0" text="Session time" textFill="#5673a9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="175.0" text="Session date" textFill="#5673a9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="293.0" text="Instructor ID" textFill="#5673a9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="243.0" layoutY="293.0" text="Candidate ID" textFill="#5673a9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fx:id="er1" fill="#c90707" layoutX="151.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="er2" fill="#c90707" layoutX="40.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="er3" fill="#c90707" layoutX="279.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="er4" fill="#c90707" layoutX="40.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="er5" fill="#c90707" layoutX="279.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Label layoutX="84.0" layoutY="63.0" text="Choose the number of the code session you want to update" textFill="#5673a9" />
+            </children></Pane>
+   </center>
+   </BorderPane>

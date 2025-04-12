@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.Page1Controleur">
+   <top>
+      <Pane prefHeight="110.0" prefWidth="670.0" style="-fx-background-color: #5673a9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="70.0" layoutX="72.0" layoutY="22.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/19.png " />
+               </image>
+            </ImageView>
+            <Text fill="#d9e4f9" layoutX="142.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+               <font>
+                  <Font name="Corbel" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="#d9e4f9" layoutX="178.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+   
+
+      <Pane prefHeight="397.0" prefWidth="670.0" style="-fx-background-color: #f2f2f2;" BorderPane.alignment="CENTER">
+         <children>
+         <VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+            <ImageView fitHeight="95.0" fitWidth="88.0" layoutX="76.0" layoutY="34.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/21.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="97.0" layoutX="495.0" layoutY="34.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/23.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="101.0" layoutX="275.0" layoutY="38.0" onMouseClicked="#Pagevehicule">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/29.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="111.0" layoutX="491.0" layoutY="257.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/28.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="122.0" layoutX="59.0" layoutY="262.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/27.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="108.0" fitWidth="100.0" layoutX="285.0" layoutY="245.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/22.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="101.0" layoutX="506.0" layoutY="143.0">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="112.0" layoutX="276.0" layoutY="155.0" onMouseClicked="#PageScCond">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/25.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="102.0" layoutX="69.0" layoutY="135.0" onMouseClicked="#pageScCode">
+               <image>
+                  <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/26.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </bottom>
+</BorderPane>
