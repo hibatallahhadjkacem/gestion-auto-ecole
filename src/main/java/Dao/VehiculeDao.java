@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Entities.Categorie;
+import Entities.Papier;
+import Entities.Repartition;
+import Entities.Type2;
 import Entities.Vehicule;
 
 public class VehiculeDao {
@@ -89,7 +92,7 @@ public class VehiculeDao {
         }
     }
     
-    public boolean updatekmProchEntrVehicule(String immat, Categorie categorie) {
+    public boolean updateCategorieVehicule(String immat, Categorie categorie) {
         String sql = "UPDATE vehicule SET categorie= ? WHERE immatricule = ?";
         
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -183,7 +186,50 @@ public class VehiculeDao {
 
         return vehicules;
     }
-    
+	public List<Papier> getPapiersByImmat(String immatriculation) {
+	    List<Papier> liste = new ArrayList<>();
+	    String sql = "SELECT * FROM papier WHERE immatV = ?";
+	    				
+	    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+	        stmt.setString(1, immatriculation);
+	        ResultSet rs = stmt.executeQuery();
+	        
+	        while (rs.next()) {
+	            liste.add(new Papier(
+	            	Type2.valueOf(rs.getString("type")),
+	                rs.getDouble("cout"),
+	                rs.getDate("dateProchaine").toLocalDate(),
+	                rs.getDate("date").toLocalDate(),
+	                rs.getString("immatV") 
+	            ));
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return liste;
+	}
+	public List<Repartition> getReparationsByImmat(String immatriculation) {
+	    List<Repartition> liste = new ArrayList<>();
+	    String sql = "SELECT * FROM repartition WHERE immatV = ?";
+	    
+	    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+	        stmt.setString(1, immatriculation);
+	        ResultSet rs = stmt.executeQuery();
+	        
+	        while (rs.next()) {
+	            liste.add(new Repartition(
+	                rs.getDate("date").toLocalDate(),
+	                rs.getString("description"),
+	                rs.getDouble("cout"),
+	                rs.getString("preuve"),
+	                rs.getString("immatV") 
+	            ));
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return liste;
+	}
 
     
 

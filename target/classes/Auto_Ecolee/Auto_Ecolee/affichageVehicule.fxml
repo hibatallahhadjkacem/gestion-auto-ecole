@@ -55,7 +55,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+            <Button layoutY="233.0" mnemonicParsing="false" onAction="#scConduit" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -64,7 +64,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onAction="#scCode" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
                <graphic>
                   <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -279,6 +279,7 @@
             </HBox>
             <TextField fx:id="immat" layoutX="230.0" layoutY="43.0" promptText="Please enter" style="-fx-border-color: #d9e4f9;" />
             <Button layoutX="388.0" layoutY="43.0" mnemonicParsing="false" onAction="#get" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #5673a9;" text="get" textFill="#f2f2f2" />
+            <Text fx:id="er1" fill="#c90707" layoutX="153.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             
             </children>
             </Pane>

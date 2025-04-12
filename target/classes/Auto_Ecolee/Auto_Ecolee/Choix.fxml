@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -52,7 +53,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+            <Button layoutY="233.0" mnemonicParsing="false" onAction="#scConduit" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,7 +62,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+            <Button layoutX="-1.0" layoutY="271.0" mnemonicParsing="false" onAction="#scCode" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
                <graphic>
                   <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -114,9 +115,9 @@
       <Pane prefHeight="508.0" prefWidth="494.0" BorderPane.alignment="CENTER">
       
          <children>
-                     <Button fx:id="btnUapdate" layoutX="369.0" layoutY="28.0" mnemonicParsing="false" onAction="#updVehicule" prefHeight="12.0" prefWidth="26.0" style="-fx-background-color: #f2f2f2;">
+                     <Button fx:id="btnUapdate" layoutX="379.0" layoutY="28.0" mnemonicParsing="false" onAction="#updVehicule" prefHeight="12.0" prefWidth="26.0" style="-fx-background-color: #f2f2f2;">
                <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/update2.png" />
                      </image>
@@ -124,7 +125,7 @@
                </graphic>
             </Button><Button fx:id="btnGet" layoutX="421.0" layoutY="28.0" mnemonicParsing="false" onAction="#affVehicule" style="-fx-background-color: #f2f2f2;">
                <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="27.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/affich2.png" />
                      </image>
@@ -137,17 +138,42 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TableView fx:id="tab" layoutX="14.0" layoutY="65.0" prefHeight="354.0" prefWidth="474.0" style="-fx-background-color: #d9e4f9; -fx-border-color: #000000;">
+            <TableView fx:id="tab" layoutX="17.0" layoutY="64.0" prefHeight="354.0" prefWidth="461.0" style="-fx-background-color: #d9e4f9; -fx-border-color: #000000;">
               <columns>
-                <TableColumn fx:id="modelC" prefWidth="100.79998588562012" style="-fx-background-color: #f2f2f2; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" text="Model" />
-                <TableColumn fx:id="immatC" prefWidth="123.20001983642578" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Registration Number" />
-                  <TableColumn fx:id="date" prefWidth="115.99996948242188" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Date Added" />
-                  <TableColumn fx:id="Availability" prefWidth="70.4000244140625" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Availability" />
-                  <TableColumn fx:id="deleteC" prefWidth="59.9998779296875" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" />
+                <TableColumn fx:id="modelC" prefWidth="115.99994468688965" style="-fx-background-color: #f2f2f2; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" text="Model" />
+                <TableColumn fx:id="immatC" prefWidth="140.800048828125" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Registration Number" />
+                  <TableColumn fx:id="date" prefWidth="117.60006713867188" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Date Added" />
+                  <TableColumn fx:id="deleteC" prefWidth="76.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" />
               </columns>
             </TableView>
             <Button layoutX="171.0" layoutY="433.0" mnemonicParsing="false" onAction="#addPapier" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #d9e4f9;" text="Vehicle paperwork" textFill="#5673a9" />
-            <Button layoutX="24.0" layoutY="433.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="Add Vehicle" textFill="#d9e4f9" />     </children> </Pane>
+            <Button layoutX="24.0" layoutY="433.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="Add Vehicle" textFill="#d9e4f9" />
+            <Button fx:id="btnDespo" layoutX="337.0" layoutY="26.0" mnemonicParsing="false" onAction="#affdispo" style="-fx-background-color: #f2f2f2;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/calendrier2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnnotif" layoutY="1.0" mnemonicParsing="false" onAction="#notif" prefHeight="24.0" prefWidth="33.0" style="-fx-background-color: #f2f2f2;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:///C:/Users/Hiba/OneDrive/Bureau/cpi2/java project/auto ecole/notif.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button> 
+            
+<!-- Pane caché pour notifications -->
+<Pane fx:id="notifPane" layoutX="4.0" layoutY="38.0" prefHeight="356.0" prefWidth="303.0" style="-fx-background-color: #ffffff; -fx-border-color: #5673a9; -fx-border-width: 1; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 2);" visible="true">
+   <children>
+      <Text fill="#5673a9" layoutX="10.0" layoutY="20.0" style="-fx-font-weight: bold;" text="Notifications" />
+      <ListView fx:id="notifList" layoutX="10.0" layoutY="30.0" prefHeight="314.0" prefWidth="281.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #c2c2c2; -fx-background-color: #ffffff;" />
+   </children>
+</Pane>    </children> </Pane>
    
    </center>
 </BorderPane>

@@ -1,15 +1,30 @@
 package Entities;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.List;
+
 
 public class DisponibiliteV {
 	private LocalDateTime dateTime;
 	private boolean dispo;
+	private String immatricule;
+
 	
 
+
+	public DisponibiliteV(LocalDateTime dateTime, boolean dispo, String immatricule) {
+		super();
+		this.dateTime = dateTime;
+		this.dispo = dispo;
+		this.immatricule = immatricule;
+	}
+
+	public String getImmatricule() {
+		return immatricule;
+	}
+
+	public void setImmatricule(String immatricule) {
+		this.immatricule = immatricule;
+	}
 
 	public LocalDateTime getDateTime() {
 		return dateTime;
@@ -27,15 +42,11 @@ public class DisponibiliteV {
 		this.dispo = dispo;
 	}
 
-	public DisponibiliteV(LocalDateTime dateTime, boolean dispo) {
-		super();
-		this.dateTime = dateTime;
-		this.dispo = dispo;
-	}
+
 
 	@Override
 	public String toString() {
-		return "DisponibiliteV [dateTime=" + dateTime + ", dispo=" + dispo + "]";
+		return "DisponibiliteV [dateTime=" + dateTime + ", dispo=" + dispo + ", immatricule=" + immatricule + "]";
 	}
 	
 

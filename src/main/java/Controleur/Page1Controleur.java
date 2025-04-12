@@ -12,9 +12,21 @@ import javafx.scene.input.MouseEvent;
 
 public class Page1Controleur {
 	@FXML
+	private void pageScCode() throws IOException {
+		App.setRoot("SeanceCode"); 
+	}
+	
+	@FXML
+	private void PageScCond() throws IOException {
+		App.setRoot("SeanceConduite"); 
+	}
+	
+	@FXML
 	private void Pagevehicule() throws IOException {
 		App.setRoot("Choix"); 
 	}
+	
+	
 
 	
 

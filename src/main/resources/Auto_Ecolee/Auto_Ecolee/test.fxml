@@ -156,6 +156,29 @@
                   </ImageView>
                </graphic>
             </Button>
+            
             <Text fx:id="test" layoutX="213.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="110.13671875" />     </children> </Pane>
+   <TableView fx:id="tableC" layoutX="10.0" layoutY="54.0" prefHeight="280.0" prefWidth="223.0">
+              <columns>
+                <TableColumn prefWidth="31.999998092651367" style="-fx-background-color: #628ad5;" text="Car" />
+                <TableColumn fx:id="Cimmat" prefWidth="93.60004425048828" text="Reg. Number" />
+                  <TableColumn fx:id="Ctp" prefWidth="93.60004425048828" text="Time" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tableT" layoutX="236.0" layoutY="54.0" prefHeight="280.0" prefWidth="223.0">
+               <columns>
+                  <TableColumn prefWidth="38.39996337890625" style="-fx-background-color: #628ad5;" text="Truck" />
+                  <TableColumn fx:id="Timmat" prefWidth="88.00009155273438" text="Reg. Number" />
+                  <TableColumn fx:id="Ttp" prefWidth="93.60004425048828" text="Time" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tableM" layoutX="461.0" layoutY="54.0" prefHeight="280.0" prefWidth="227.0">
+               <columns>
+                  <TableColumn prefWidth="40.799957275390625" style="-fx-background-color: #628ad5;" text="Moto" />
+                  <TableColumn fx:id="Mimmat" prefWidth="88.00009155273438" text="Reg. Number" />
+                  <TableColumn fx:id="Mtp" prefWidth="93.60004425048828" text="Time" />
+               </columns>
+            </TableView>
+   
    </center>
 </BorderPane>

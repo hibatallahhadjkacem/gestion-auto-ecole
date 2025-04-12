@@ -9,16 +9,20 @@ import java.util.ResourceBundle;
 import Auto_Ecolee.Auto_Ecolee.App;
 import Entities.Papier;
 import Service.PapierService;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 public class PapierControleur implements Initializable {
 	@FXML
@@ -57,10 +61,40 @@ public class PapierControleur implements Initializable {
     private Text er5;
 	
     private PapierService papierService=new PapierService();
+    private DisponibiliteVControleur disponibiliteVControleur =new DisponibiliteVControleur();
     @Override
     public void initialize(URL url,ResourceBundle rb) {
     	ObservableList<String> list =FXCollections.observableArrayList("once a year","every six months","every three months");
     	insurp.setItems(list);
+    	
+        // Désactiver les dates passées 
+        taxd.setDayCellFactory(picker -> new DateCell() {
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.isBefore(LocalDate.now()));
+            }
+        });
+
+        insurd.setDayCellFactory(picker -> new DateCell() {
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.isBefore(LocalDate.now()));
+            }
+        });
+
+        oild.setDayCellFactory(picker -> new DateCell() {
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.isBefore(LocalDate.now()));
+            }
+        });
+
+        inspd.setDayCellFactory(picker -> new DateCell() {
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.isBefore(LocalDate.now()));
+            }
+        });
     }
     
 
@@ -88,19 +122,25 @@ public class PapierControleur implements Initializable {
 		String weight=inspw.getText().trim();
 		String Ecapacite=inspcap.getText().trim();
 		if(immatricule.isEmpty()) {
-			er1.setText("You must fill in the registration number");
-		}else { 
+			afficherMessageTemporaire(er1, "You must fill in the registration number", 2);
+		}
+		else { 
+		 if(!immatricule.isEmpty() && disponibiliteVControleur.rechImmat(immatricule)==0) {
+				afficherMessageTemporaire(er1, "This vehicle registration is not found", 2);
+			}else if(!immatricule.isEmpty() && disponibiliteVControleur.rechImmat(immatricule)==-1) {
+				afficherMessageTemporaire(er1, "An error in the database", 2);
+			}
 		//tax sticker
 		if(!taxcost.isEmpty() && !isFloat(taxcost)) {
-			er2.setText("le cout doit etre un float ou nombre");
+			afficherMessageTemporaire(er2, "le cout doit etre un float ou nombre", 2);
 			testTax=false;
 		}else
 		if(taxcost.isEmpty() &&  taxDate!=null) {
-			er2.setText("tu as oublier de remplir le cout");
+			afficherMessageTemporaire(er2, "tu as oublier de remplir le cout", 2);
 			testTax=false;
 		}else
 		if (!taxcost.isEmpty() &&  taxDate==null) {
-			er2.setText("tu as oublier de remplir la date");
+			afficherMessageTemporaire(er2, "tu as oublier de remplir la date", 2);
 			testTax=false;
 		}else
 		if(!taxcost.isEmpty() &&  taxDate!=null && isFloat(taxcost)) {
@@ -109,19 +149,20 @@ public class PapierControleur implements Initializable {
 		}
 		//insurance
 		if(!isFloat(insurCost) && !insurCost.isEmpty()) {
-			er3.setText("le cout doit etre un float ou nombre");
+			afficherMessageTemporaire(er3, "le cout doit etre un float ou nombre", 2);
+
 			testInsur=false;
 		}else
 		if(insurCost.isEmpty() &&  insurDate!=null) {
-			er3.setText("tu as oublier de remplir le cout");
+			afficherMessageTemporaire(er3, "tu as oublier de remplir le cout", 2);
 			testInsur=false;
 		}else
 		if (!insurCost.isEmpty() &&  insurDate==null) {
-			er3.setText("tu as oublier de remplir la date");
+			afficherMessageTemporaire(er3, "tu as oublier de remplir la date", 2);
 			testInsur=false;
 		}
 		if (!insurCost.isEmpty() &&  insurDate!=null && TypeP==null) {
-			er3.setText("tu as oublier de choisir type de paiement");
+			afficherMessageTemporaire(er3, "tu as oublier de choisir type de paiement", 2);
 			testInsur=false;
 		}else
 		if(!insurCost.isEmpty() &&  insurDate!=null && isFloat(insurCost) && TypeP!=null) {
@@ -130,15 +171,15 @@ public class PapierControleur implements Initializable {
 		}
 		//oil change
 		if(!isFloat(oilCost) && !oilCost.isEmpty()) {
-			er5.setText("le cout doit etre un float ou nombre");
+			afficherMessageTemporaire(er5, "le cout doit etre un float ou nombre", 2);
 			testOil=false;
 		}else
 		if(oilCost.isEmpty() &&  oilDate!=null) {
-			er5.setText("tu as oublier de remplir le cout");
+			afficherMessageTemporaire(er5, "tu as oublier de remplir le cout", 2);
 			testOil=false;
 		}else
 		if (!oilCost.isEmpty() &&  oilDate==null) {
-			er5.setText("tu as oublier de remplir la date");
+			afficherMessageTemporaire(er5, "tu as oublier de remplir la date", 2);
 			testOil=false;
 		}else
 		if(!oilCost.isEmpty() &&  oilDate!=null && isFloat(oilCost)) {
@@ -147,15 +188,15 @@ public class PapierControleur implements Initializable {
 		}
 		//inspection
 		if(!isFloat(inspCost) && !inspCost.isEmpty()) {
-			er4.setText("le cout doit etre un float ou nombre");
+			afficherMessageTemporaire(er4, "le cout doit etre un float ou nombre", 2);
 			testinsp=false;
 		}else
 		if(inspCost.isEmpty() &&  inspDate!=null) {
-			er4.setText("tu as oublier de remplir le cout");
+			afficherMessageTemporaire(er4, "tu as oublier de remplir le cout", 2);
 			testinsp=false;
 		}else
 		if (!inspCost.isEmpty() &&  inspDate==null) {
-			er4.setText("tu as oublier de remplir la date");
+			afficherMessageTemporaire(er4, "tu as oublier de remplir la date", 2);
 			testinsp=false;
 		}else
 		if(!inspCost.isEmpty() &&  inspDate!=null && isFloat(inspCost)) {
@@ -165,14 +206,43 @@ public class PapierControleur implements Initializable {
 		
 		
 		}
-		if(testTax && testInsur && testOil && testinsp && !immatricule.isEmpty() ) {
+		if(testTax && testInsur && testOil && testinsp && !immatricule.isEmpty() && disponibiliteVControleur.rechImmat(immatricule)==1 ) {
 		App.setRoot("Choix");}
 		
 	}
-
+	
+	// Créer un Timeline pour effacer le texte après tp
+		private void afficherMessageTemporaire(Text textElement, String message, int duree) {
+		    textElement.setText(message);
+		    Timeline timeline = new Timeline(
+		        new KeyFrame(Duration.seconds(duree), e -> textElement.setText(""))
+		    );
+		    timeline.setCycleCount(1); // Exécuter une seule fois
+		    timeline.play(); // Lancer le timer
+		}
+	
+	
+	//update papier
+	
+	public boolean updateCout(String immat,float cout,String type,LocalDate date) {
+		return papierService.updateCout(immat, cout, type, date);
+	}
+	
+	public boolean updatePapierType(String immat,LocalDate date, String weight,String Ecapacite,String typeP,String type) {
+		return papierService.updatePapierType(immat, date, weight, Ecapacite, typeP, type);
+	}
+	@FXML
+	private void scCode() throws IOException {
+		App.setRoot("SeanceCode"); 
+	}
 	@FXML
 	private void back() throws IOException {
 		App.setRoot("Choix");
+	}
+	
+	@FXML
+	private void scConduit() throws IOException {
+		App.setRoot("SeanceConduite"); 
 	}
 	@FXML
 	private void home() throws IOException {

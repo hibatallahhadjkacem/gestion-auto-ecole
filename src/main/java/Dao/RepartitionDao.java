@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class RepartitionDao {
 
 	    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 	        stmt.setDate(1, java.sql.Date.valueOf(repartition.getDate()));
-	        stmt.setString(2, repartition.getDiscription());
+	        stmt.setString(2, repartition.getDescription());
 	        stmt.setDouble(3, repartition.getCout());
 	        stmt.setString(4, repartition.getPreuve());
 	        stmt.setString(5, repartition.getImmatricule());
@@ -44,6 +45,53 @@ public class RepartitionDao {
 	        e.printStackTrace();
 	        return null;
 	    }
+	}
+	
+	//update repartition
+	
+	public boolean updatePreuveRepartition(String immat,String preuve,LocalDate date) {
+        String sql = "UPDATE repartition SET preuve= ? WHERE immatV = ? AND date=?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, preuve); 
+            stmt.setString(2, immat);
+            stmt.setDate(3, java.sql.Date.valueOf(date));
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+	}
+	
+	public boolean updateDescriptionRepartition(String immat,String descrip,LocalDate date) {
+        String sql = "UPDATE repartition SET description= ? WHERE immatV = ? AND date=?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, descrip); 
+            stmt.setString(2, immat);
+            stmt.setDate(3, java.sql.Date.valueOf(date));
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+	}
+	
+	public boolean updateCoutRepartition(String immat,float cout,LocalDate date) {
+        String sql = "UPDATE repartition SET cout= ? WHERE immatV = ? AND date=?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setFloat(1, cout); 
+            stmt.setString(2, immat);
+            stmt.setDate(3, java.sql.Date.valueOf(date));
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
 	}
 	
 	public List<Repartition> getReparationsByImmat(String immatriculation) {

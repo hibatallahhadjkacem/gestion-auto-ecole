@@ -19,5 +19,19 @@ public class RepartitionService {
 	public List<Repartition> getReparationsByImmat(String immatricule){
 		return repartitionDao.getReparationsByImmat(immatricule);
 	}
+	
+	//update Repartition
+	
+	public boolean updatePreuveRepartition(String immat,String preuve,LocalDate date) {
+		return repartitionDao.updatePreuveRepartition(immat, preuve, date);
+	}
+	
+	public boolean updateDescriptionRepartition(String immat,String descrip,LocalDate date) {
+		return repartitionDao.updateDescriptionRepartition(immat, descrip, date);
+	}
+	
+	public boolean updateCoutRepartition(String immat,float cout,LocalDate date) {
+		return repartitionDao.updateCoutRepartition(immat, cout, date);
+	}
 
 }

@@ -3,7 +3,7 @@ package Entities;
 import java.time.LocalDate;
 
 public class Papier {
-	private Type type;
+	private Type2 type;
 	private double cout;
 	private LocalDate date;
 	private LocalDate dateProchain;//calculable
@@ -27,7 +27,7 @@ public class Papier {
 
 
 
-	public Papier(Type type, double cout, LocalDate date, LocalDate dateProchain, String immatricule) {
+	public Papier(Type2 type, double cout, LocalDate dateProchain, LocalDate date, String immatricule) {
 		super();
 		this.type = type;
 		this.cout = cout;
@@ -55,11 +55,11 @@ public class Papier {
 
 
 
-	public Type getType() {
+	public Type2 getType() {
 		return type;
 	}
 
-	public void setType(Type type) {
+	public void setType(Type2 type) {
 		this.type = type;
 	}
 

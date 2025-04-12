@@ -9,7 +9,7 @@ public class connection {
 
     private static Connection connexion;
 
-    private final String DB_URL = "jdbc:mysql://localhost:3306/auto-ecoleproj";
+    private final String DB_URL = "jdbc:mysql://localhost:3306/autoecole";
     private final String USER = "root";
     private final String PASS = "";
 

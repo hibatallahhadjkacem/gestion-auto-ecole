@@ -4,13 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import Entities.Categorie;
 import Entities.Papier;
-import Entities.Repartition;
-import Entities.Type;
+import Entities.Type2;
 
 public class PapierDao {
 	private Connection conn = connection.getInstance();
@@ -22,7 +21,7 @@ public class PapierDao {
 	    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 	        stmt.setString(1, papier.getType().toString());
 	        stmt.setDouble(2, papier.getCout());
-	        stmt.setDate(3, java.sql.Date.valueOf(papier.getDate()));
+	        stmt.setDate(3, java.sql.Date.valueOf(papier.getDate()));  
 	        stmt.setDate(4, java.sql.Date.valueOf(papier.getDateProchain()));
 	        stmt.setString(5, papier.getImmatricule());
 	        stmt.executeUpdate();
@@ -64,6 +63,41 @@ public class PapierDao {
         }
         return null; 
     }
+	
+	//update papier
+	
+	public boolean updateCoutPapier(String immat,float cout,LocalDate date,Type2 type) {
+        String sql = "UPDATE papier SET cout= ? WHERE immatV = ? AND date=? AND type=?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setFloat(1, cout); 
+            stmt.setString(2, immat);
+            stmt.setDate(3, java.sql.Date.valueOf(date));
+            stmt.setString(4, type.toString());
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+	}
+	
+	public boolean updateDateProchPapier(String immat,LocalDate dateProch,LocalDate date,Type2 type) {
+        String sql = "UPDATE papier SET dateProchaine= ? WHERE immatV = ? AND date=? AND type=?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setDate(1,  java.sql.Date.valueOf(dateProch)); 
+            stmt.setString(2, immat);
+            stmt.setDate(3, java.sql.Date.valueOf(date));
+            stmt.setString(4, type.toString());
+
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+	}
 		
 	
 	
@@ -94,10 +128,10 @@ public class PapierDao {
 	        
 	        while (rs.next()) {
 	            liste.add(new Papier(
-	            	Type.valueOf(rs.getString("type")),
+	            	Type2.valueOf(rs.getString("type")),
 	                rs.getDouble("cout"),
-	                rs.getDate("date").toLocalDate(),
 	                rs.getDate("dateProchaine").toLocalDate(),
+	                rs.getDate("date").toLocalDate(),
 	                rs.getString("immatV") 
 	            ));
 	        }

@@ -3,27 +3,37 @@ package Controleur;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javafx.scene.control.TableCell;
 
 
 import Auto_Ecolee.Auto_Ecolee.App;
+import Entities.Categorie;
 import Entities.Vehicule;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 public class ChoixControleur {
@@ -46,6 +56,20 @@ public class ChoixControleur {
 	private Button btnGet;
 	@FXML
 	private Button btnUapdate;
+	@FXML
+	private Button btnDespo;
+	//notif
+	@FXML
+	private Pane notifPane;
+
+	@FXML
+	private Button btnnotif;
+
+	
+	
+	@FXML
+	private ListView<Node> notifList;
+	private boolean isNotifVisible = false;
 	
 	
 	
@@ -85,7 +109,86 @@ public class ChoixControleur {
         Tooltip tooltip2 = new Tooltip("Update vehicle");
         btnUapdate.setTooltip(tooltip2);
         tooltip2.setShowDelay(Duration.ZERO);
+        //btnDespo
+        Tooltip tooltip3 = new Tooltip("Check the availability of vehicles");
+        btnDespo.setTooltip(tooltip3);
+        tooltip3.setShowDelay(Duration.ZERO);
+        
+        //notif
+        
+        notifPane.setVisible(false);
+        Tooltip tooltip4 = new Tooltip("Click to see the notifications");
+        btnnotif.setTooltip(tooltip4);
+        tooltip4.setShowDelay(Duration.ZERO);
 	}
+	
+	//notif 
+	@FXML
+	private void notif() throws SQLException {
+	    isNotifVisible = !isNotifVisible;
+	    notifPane.setVisible(isNotifVisible);
+
+	    if (isNotifVisible) {
+	        // Suppose que tu récupères ta liste de véhicules depuis un service ou une DAO
+	        List<Vehicule> vehicules = vehiculeControleur.getAllVehicules(); // À adapter
+	        List<Node> alerts = vehiculeControleur.genererNotifications(vehicules);  // Liste de Nodes
+
+	        // Définir le CellFactory pour la ListView afin de gérer des objets de type Node
+	        notifList.setCellFactory(listView -> new ListCell<Node>() {
+	            @Override
+	            protected void updateItem(Node item, boolean empty) {
+	                super.updateItem(item, empty);
+
+	                if (empty || item == null) {
+	                    setText(null);
+	                    setGraphic(null);
+	                } else {
+	                    setGraphic(item);  // Mettre l'élément graphique (TextFlow) dans la cellule
+	                }
+	            }
+	        });
+
+	        // Vider la liste avant d'ajouter les nouveaux éléments
+	        notifList.getItems().clear();
+
+	        if (alerts.isEmpty()) {
+	            // Créer un Label avec du texte stylisé pour "Aucune alerte"
+	            Label noAlertsLabel = new Label("Aucune alerte pour l'instant 🚗");
+	            noAlertsLabel.setStyle(
+	                "-fx-font-weight: bold; " +  
+	                "-fx-font-size: 12px; " +   
+	                "-fx-text-fill: black;" +     
+	                "-fx-background-color: transparent; " +  // Fond transparent pour éviter le cadre
+	                "-fx-padding: 20px; " 
+	            );
+
+	            StackPane container = new StackPane();
+	            container.setStyle(" -fx-background-color: transparent; -fx-padding: 20px; -fx-alignment: center;");  // Pas de fond et pas de bordure
+	            container.getChildren().add(noAlertsLabel);
+
+	            // Ajouter le conteneur à la ListView
+	            notifList.getItems().add(container);  // Ajouter le StackPane à la ListView
+	        } else {
+	            // Ajouter les notifications générées dans la liste
+	            for (Node alert : alerts) {
+	                StackPane alertContainer = new StackPane();
+	                alertContainer.setStyle("-fx-padding: 5px; -fx-alignment: center-left; -fx-background-color: transparent; -fx-border-width: 0;"); // Fond transparent, pas de bordure
+	                alertContainer.getChildren().add(alert);  // Ajouter le TextFlow ou autre Node
+
+	                notifList.getItems().add(alertContainer);  // Ajouter le StackPane à la ListView
+	            }
+	        }
+	    }
+	}
+
+
+
+
+	
+	
+/////////////
+
+
 
 	private void afficherVehicules() {
 	    try {
@@ -182,6 +285,11 @@ public class ChoixControleur {
 	
 
 ////
+	    
+		@FXML
+		private void scCode() throws IOException {
+			App.setRoot("SeanceCode"); 
+		}
 	
 	@FXML
 	private void affVehicule() throws IOException {
@@ -209,7 +317,15 @@ public class ChoixControleur {
 		App.setRoot("Repartition"); 
 	}
 	
-
+	@FXML
+	private void affdispo() throws IOException {
+		App.setRoot("DisponibiliteV"); 
+	}
+	
+	@FXML
+	private void scConduit() throws IOException {
+		App.setRoot("SeanceConduite"); 
+	}
 	
 	@FXML
 	private void home() throws IOException {
@@ -222,5 +338,9 @@ public class ChoixControleur {
     @FXML
     private void color2(MouseEvent event) {
     	 ((Button) event.getSource()).setStyle("-fx-background-color: #5673a9; -fx-text-fill: white;");    }
+    
+    
+
+
 
 }

@@ -4,15 +4,15 @@ import java.time.LocalDate;
 
 public class Repartition {
 	private LocalDate date;
-	private String discription;
+	private String description;
 	private double cout;
 	private String preuve;
 	private String immatricule;
 
 	
-	public Repartition(LocalDate date, String discription, double cout, String preuve,String immatricule) {
+	public Repartition(LocalDate date, String description, double cout, String preuve,String immatricule) {
 		this.date = date;
-		this.discription = discription;
+		this.description = description;
 		this.cout = cout;
 		this.preuve = preuve;
 		this.immatricule=immatricule;
@@ -45,13 +45,19 @@ public class Repartition {
 		this.date = date;
 	}
 
-	public String getDiscription() {
-		return discription;
+
+
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDiscription(String discription) {
-		this.discription = discription;
+
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
+
 
 	public double getCout() {
 		return cout;
@@ -71,7 +77,7 @@ public class Repartition {
 
 	@Override
 	public String toString() {
-		return "Repartition [date=" + date + ", discription=" + discription + ", cout=" + cout + ", preuve=" + preuve
+		return "Repartition [date=" + date + ", description=" + description + ", cout=" + cout + ", preuve=" + preuve
 				+ ", immatricule=" + immatricule + "]";
 	}
 	

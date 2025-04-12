@@ -10,11 +10,11 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
-           <dependency>
-           <groupId>mysql</groupId>
-           <artifactId>mysql-connector-java</artifactId>
-           <version>8.0.33</version>
-       </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -26,9 +26,14 @@
             <version>13</version>
         </dependency>
         <dependency>
-        	<groupId>org.fsb</groupId>
-        	<artifactId>MyFirstFx</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fsb</groupId>
+            <artifactId>MyFirstFx</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>
@@ -47,11 +52,10 @@
                 <version>0.0.6</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running -->
-                        <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>Auto_Ecolee.Auto_Ecolee.App</mainClass>
+                            <addModules>javafx.controls, javafx.fxml, javafx.web</addModules>
                         </configuration>
                     </execution>
                 </executions>
