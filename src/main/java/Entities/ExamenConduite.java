@@ -10,14 +10,14 @@ public class ExamenConduite {
 	private LocalTime endTime;
 	private int moniteur;
 	private int condidat;
-	private int vehicule;
+	private String vehicule;
 	private Res resultat;
 	private double longitude;
 	private double latitude;
 	private String adress;
 	private double frais;
 	public ExamenConduite(int numero, LocalDate date, LocalTime startTime, LocalTime endTime, int moniteur,
-			int condidat, int vehicule, Res resultat, double longitude, double latitude, String adress, double frais) {
+			int condidat, String vehicule, Res resultat, double longitude, double latitude, String adress, double frais) {
 		super();
 		this.numero = numero;
 		this.date = date;
@@ -68,10 +68,10 @@ public class ExamenConduite {
 	public void setCondidat(int condidat) {
 		this.condidat = condidat;
 	}
-	public int getVehicule() {
+	public String getVehicule() {
 		return vehicule;
 	}
-	public void setVehicule(int vehicule) {
+	public void setVehicule(String vehicule) {
 		this.vehicule = vehicule;
 	}
 	public Res getResultat() {

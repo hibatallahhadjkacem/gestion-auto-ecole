@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class ExamenCode {
-	private int numero;
+	private static int numero;
 	private LocalDate date;
 	private int moniteur_id;
 	private int condidat_num;
@@ -24,7 +24,7 @@ public class ExamenCode {
 		this.resultat = resultat;
 		this.frais = frais;
 	}
-	public int getNumero() {
+	public static int getNumero() {
 		return numero;
 	}
 	public void setNumero(int numero) {

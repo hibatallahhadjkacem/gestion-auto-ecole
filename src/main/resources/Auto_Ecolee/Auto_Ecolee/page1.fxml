@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="475.0" prefWidth="647.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.Page1Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Pane prefHeight="435.0" prefWidth="644.0">
+         <children>
+            <Text fill="#5673a9" layoutX="167.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate" wrappingWidth="123.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="table" layoutX="158.0" layoutY="28.0" prefHeight="353.0" prefWidth="447.0" style="-fx-background-color: #d9e4f9; -fx-border-color: #000000;">
+               <columns>
+                  <TableColumn fx:id="numeroColumn" prefWidth="130.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" text=" Registration Number" />
+                  <TableColumn fx:id="lastname" prefWidth="101.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Last name" />
+                  <TableColumn fx:id="firstname" prefWidth="86.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="First name" />
+                  <TableColumn fx:id="permi" prefWidth="66.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px; -fx-border-color: #000000;" text="PermiType" />
+                  <TableColumn fx:id="actionsColumn" minWidth="6.0" prefWidth="60.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 0px 0px 2px; -fx-border-color: #000000;" />
+               </columns>
+            </TableView>
+            <Button layoutX="164.0" layoutY="396.0" mnemonicParsing="false" onAction="#addCondidat" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="add Candidate" textFill="#d9e4f9" />
+            <Button layoutX="313.0" layoutY="396.0" mnemonicParsing="false" onAction="#addDossier" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #d9e4f9;" text="Add File" textFill="#5673a9" />
+            <Button layoutX="470.0" layoutY="396.0" mnemonicParsing="false" onAction="#DeleteAll" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #5673a9;" text="Delete All" textFill="#d9e4f9" />
+            <ImageView fx:id="updateButton" fitHeight="24.0" fitWidth="29.0" layoutX="551.0" layoutY="3.0" onMouseClicked="#update" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/485002119_1659370628299769_7991747288996628808_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="afficheButton" fitHeight="24.0" fitWidth="29.0" layoutX="586.0" layoutY="2.0" onMouseClicked="#affiche" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pics/484999241_1687270925192987_403711732119261573_n.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="-24.0" layoutY="-20.0" prefHeight="475.0" prefWidth="174.0" style="-fx-background-color: #5673a9;">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="66.0" layoutY="32.0">
+                     <image>
+                        <Image url="@../../pics/485084555_1202563364771212_4950567910734387143_n.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#d9e4f9" layoutX="59.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Drive">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d9e4f9" layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving School" />
+                  <Button fx:id="home" layoutY="97.0" mnemonicParsing="false" onAction="#home" onMouseEntered="#color" onMouseExited="#color2" prefHeight="33.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Home" textAlignment="RIGHT" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="29.0" onMouseEntered="#color" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/477798212_1333161571232158_154466163284516549_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="2.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#Condidat" onMouseEntered="#color" onMouseExited="#color2" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Condidate" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485008096_9468846086527275_4125771150502199773_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="198.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Instructor" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485071911_624833157116100_1837120441914441016_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="233.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Driving session" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485711972_1588085738568585_7016212433575146370_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="4.0" layoutY="271.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Code session" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485084120_1633949624152883_6985241616844978119_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="320.0" mnemonicParsing="false" onMouseClicked="#Exam" onMouseEntered="#color" onMouseExited="#color2" prefHeight="41.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Exam" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485084544_1591036508262445_5525717240646815033_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="361.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Payment" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485682253_1202354671481887_1855037794617941813_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="398.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="dashboard" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485084017_981109843736018_46618639153520474_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="TOP_CENTER" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #5673a9;" text="Driving school " textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/485088134_584878904573758_1603416942363609279_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="164.0" mnemonicParsing="false" onMouseEntered="#color" onMouseExited="#color2" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #5673a9;" text="Vehicule" textFill="#d9e4f9">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../pics/482736793_1379792196509999_8749784479309599392_n.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

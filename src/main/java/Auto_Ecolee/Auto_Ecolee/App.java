@@ -21,7 +21,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        scene = new Scene(loadFXML("secondary"));
+        scene = new Scene(loadFXML("Home"));
         stage.setScene(scene);
         stage.setScene(scene);
         stage.sizeToScene(); // Ajuste la fenêtre à la taille du FXML

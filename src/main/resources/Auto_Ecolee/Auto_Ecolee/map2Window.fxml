@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="236.0" prefWidth="203.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Controleur.Map2WindowController">
+    <children>
+        <!-- WebView for displaying the map -->
+        <WebView fx:id="mapView" layoutX="10.0" layoutY="17.0" prefHeight="346.0" prefWidth="450.0" />
+        
+    
+      
+    </children>
+</AnchorPane>
